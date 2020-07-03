@@ -28,7 +28,7 @@ def onClickGP():
      generateGraphBtn['state'] = 'normal'
      button['state'] = 'disabled'
      entry['state'] = 'disabled'
-     os.remove('/Users/lakshaymittal/Downloads/'+security_no+'.csv')
+     os.remove('/Downloads/'+security_no+'.csv')
 
 def onClickGG():
     global graph_df
