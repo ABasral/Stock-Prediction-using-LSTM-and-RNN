@@ -5,7 +5,7 @@ from threading import Timer
 def downloadDataset(link):
 
    url_mid = str(link)
-   driver = webdriver.Chrome("/Users/lakshaymittal/PycharmProjects/ML_robot/Drivers/chromedriver")
+   driver = webdriver.Chrome("/Stock-Prediction-using-CNN/Drivers/chromedriver")
    driver.minimize_window()
 
 
