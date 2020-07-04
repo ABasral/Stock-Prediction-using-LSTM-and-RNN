@@ -1,1 +1,1 @@
-Stock Price Prediction and Analysis Using LSTM and CNN
+Stock Price Prediction and Analysis Using LSTM and RNN
