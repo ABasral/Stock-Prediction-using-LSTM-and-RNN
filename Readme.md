@@ -41,6 +41,7 @@ driver.execute_script(
 driver.find_element_by_id('ContentPlaceHolder1_btnDownload').click()
 
 ```
+![](results/result1.png)
 ### Working of the Model
 The CSV file that is downloaded is then converted into a pandas DataFrame. After that certain columns of data that are not needed are filtered from the dataframe. The only column that we process through the model is the Close Price. On the basis of the Close Price values of previous years we divide our training and testing set. We take about 80% of our dataset as the training set and the remaining 20% as testing set. MinMaxScalar is used from Scikit learn to scale the values so that the processing of such large numbers becomes easy.
 ###### The regFunc function from the regressionFunc.py file contains all the code for our model.
@@ -48,7 +49,6 @@ The CSV file that is downloaded is then converted into a pandas DataFrame. After
 #### Generating Forecast Excel File 
 Openpyxl and the xlswriter is used to generate the Forecast Excel file which contains the actual Close Prices and Predicted Close Prices according to our model.
 
-###### The last row of the excel file contains the prediction of Close price for the upcoming day.
 ###### The code segment for such generation of the Excel file is
 ```
 with ExcelWriter('../Forecast_Excel/' + sec_no + '.xlsx',
@@ -63,6 +63,9 @@ with ExcelWriter('../Forecast_Excel/' + sec_no + '.xlsx',
    writer.save()
    
 ```
+![](results/result2.png)
+###### The last row of the excel file contains the prediction of Close price for the upcoming day.
+
 ### Generating Graph
 ```
 plt.figure(figsize=(16, 8))
@@ -75,5 +78,10 @@ plt.legend(['Train', 'Val', 'Predictions'], loc='lower right')
 plt.show()
 
 ```
+## Results
+![](results/result3.png)
 
+![](results/result4.png)
 
+# Read More about this model and it's working at
+[Medium Blog](https://medium.com/stock-prediction/stock-prediction-using-python-and-ml-5a28d85c4001)
