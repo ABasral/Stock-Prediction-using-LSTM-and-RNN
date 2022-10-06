@@ -83,5 +83,4 @@ plt.show()
 
 ![](results/result4.png)
 
-# Read More about this model and it's working at
-[Medium Blog](https://medium.com/stock-prediction/stock-prediction-using-python-and-ml-5a28d85c4001)
+
